@@ -1,0 +1,68 @@
+# Diagonalizador de Sierra Morena
+
+## Física Estadística
+
+**Curso 2024/25**
+
+### Tema 5. Estadísticas Cuánticas de los Gases Ideales
+
+#### 5.1. Función de partición de un gas ideal cuántico
+
+Consideramos un sistema de N partículas idénticas que no interaccionan entre sí. Por ahora no vamos a distinguir entre bosones y fermiones. Vamos a usar la siguiente nomenclatura.
+
+Las propiedades que se refieran a una partícula las representaremos mediante letras minúsculas.
+
+Utilizaremos letras mayúsculas para las propiedades del sistema total.
+
+| Estado cuántico | Energía | Número de partículas |
+|-----------------|---------|----------------------|
+| Partícula simple \(r\) | \(\varepsilon_r\) | \(n_r\) |
+| Sistema completo \(R\) | \(E_R\) | \(N_R\) |
+
+Con esta notación vemos fácilmente que se verifican las siguientes relaciones:
+
+\[
+E_R = \sum_{j=1}^{N_R} \varepsilon_j = \sum_r n_r \varepsilon_r
+\]
+
+\[
+\psi(\xi_1, \dots, \xi_{N_R}) = \prod_{j=1}^{N_R} \psi_{r_j}(\xi_j)
+\]
+
+Un estado cuántico \(R\) de un sistema de partículas idénticas queda totalmente determinado si se conoce el número de partículas que se encuentran en cada estado de partícula simple \(r\), ya que no es posible especificar cuáles son las partículas concretas en cada estado. En consecuencia, un estado \(R\) se puede especificar mediante el conjunto de números \(\{n_{r,R}\}\), los cuales se denominan números de ocupación.
+
+Como sabemos, las propiedades termodinámicas de cualquier sistema pueden determinarse evaluando su función de partición \(Z\), definida por:
+
+\[
+Z = \sum_R e^{-\beta E_R}
+\]
+
+Si sustituimos lo que acabamos de ver de \(E_R\), tenemos:
+
+\[
+Z = \sum_{n_1, n_2, \dots} \left( \sum_{n_1 + n_2 + \cdots + n_r + \cdots = N} e^{-\beta (n_1 \varepsilon_1 + n_2 \varepsilon_2 + \cdots + n_r \varepsilon_r + \cdots)} \right)
+\]
+
+Tal que \(n_1 + n_2 + \cdots + n_r + \cdots = N\) son todas las posibles combinaciones de \(n_R\). Este cálculo resulta bastante complicado debido precisamente a esta condición, ya que \(N \approx N_A\), por lo que resulta mucho más cómoda la utilización del colectivo canónico generalizado en donde no existe dicha restricción.
+
+Así pues, pasamos a considerar la gran función de partición que recordemos que viene dada por:
+
+\[
+Q_R = \sum_{N_R=0}^{\infty} e^{-\alpha N_R} \sum_R e^{-\beta E_R}
+\]
+
+Expresión la cual es equivalente a:
+
+\[
+Q_R = \sum_{N_R,R} e^{-\alpha N_R - \beta E_R}
+\]
+
+Donde ahora el sumatorio respecto de \(R\) se extiende sobre todos los estados posibles con cualquier número de partículas. Utilizando:
+
+\[
+E_R = \sum_r n_{r,R} \varepsilon_r \quad \text{y} \quad N_R = \sum_r n_{r,R}
+\]
+
+Podemos desarrollar la expresión.
+
+---
